@@ -1,15 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --accent: #6b4fa0;
+}
 
 body {
   font-family: Arial, sans-serif;
-  background-color: lightblue;
-  text-align: center;
+  background-color: whitesmoke;
 }
 
-h1 {
-  color: crimson;
+.signup {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 100vh;
+}
+
+/* Left side */
+.visuals {
+  background-image: url("flowerbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  mix-blend-mode: multiply; /* hides the white box; remove it once you have a transparent PNG */
+}
+
+/* Right side */
+.form-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro {
+  padding: 4rem 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.intro p + p {
+  margin-top: 1.5rem;
+}
+
+form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-band {
+  background-color: white;
+  padding: 2rem 3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.form-band h2 {
+  margin-bottom: 1.5rem;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 600px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: royalblue;
+}
+
+input:required:invalid:not(:placeholder-shown) {
+  border-color: red;
+}
+
+/* Footer band */
+.footer-band {
+  padding: 2rem 3rem;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--accent);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer-band p {
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .signup {
+    grid-template-columns: 1fr;
+  }
+  .visuals {
+    min-height: 40vh;
+  }
+  .fields {
+    grid-template-columns: 1fr;
+  }
 }

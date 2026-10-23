@@ -5,15 +5,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OP Signup</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Dummy Heading</h1>
-  </header>
-  <main>
-    <p>This is dummy content to test that my CSS is linked correctly.</p>
-    <button>Sign Up</button>
+  <main class="signup">
+    <section class="visuals">
+      <img class="logo" src="goldLion.png" alt="Lion logo">
+    </section>
+
+    <section class="form-section">
+      <div class="intro">
+        <p>This is not a real online service! You know you need something like this in your life. Sign up <em>now</em> to get started.</p>
+        <p>You <em>know</em> you want to.</p>
+      </div>
+
+      <form>
+        <div class="form-band">
+          <h2>Let's do this!</h2>
+          <div class="fields">
+            <div>
+              <label for="fname">First name</label>
+              <input type="text" id="fname" name="fname" required>
+            </div>
+            <div>
+              <label for="lname">Last name</label>
+              <input type="text" id="lname" name="lname" required>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required>
+            </div>
+            <div>
+              <label for="confirm-password">Confirm password</label>
+              <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-band">
+          <button type="submit">Create Account</button>
+          <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+      </form>
+    </section>
   </main>
 </body>
 </html>
